@@ -18,6 +18,7 @@
 比較容易的方式是在Eclipse IDE裡，mouse over到專案上，右鍵選單中點選『Checkstyle->Active
  Checkstyle』
 
+請參考：Checkstyle所有的標準檢查 http://checkstyle.sourceforge.net/checks.html
 ## Template
 在IDE裡新建程式碼檔案（Class或Interface）時，可以用指定的Template（模板檔）來建立基本的內容
 ，裡頭最主要的是檔頭部份的版權宣告
