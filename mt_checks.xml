@@ -9,10 +9,12 @@
     Description: none
 -->
 <module name="Checker">
-  <property name="severity" value="info"/>
+  <property name="severity" value="warning"/>
   <property name="fileExtensions" value="java, properties, xml"/>
   <module name="TreeWalker">
-    <module name="JavadocMethod"/>
+    <module name="JavadocMethod">
+        <property name="allowMissingPropertyJavadoc" value="true"/>
+    </module>
     <module name="JavadocType"/>
     <module name="JavadocVariable"/>
     <module name="JavadocStyle"/>
@@ -57,7 +59,7 @@
     <module name="EmptyStatement"/>
     <module name="EqualsHashCode"/>
     <module name="HiddenField">
-        <property name="ignoreConstructorParameter" value="true"/>
+        <property name="tokens" value="VARIABLE_DEF"/>
     </module>
     <module name="IllegalInstantiation"/>
     <module name="InnerAssignment"/>
@@ -67,12 +69,12 @@
     <module name="MissingSwitchDefault"/>
     <module name="SimplifyBooleanExpression"/>
     <module name="SimplifyBooleanReturn"/>
-    <module name="DesignForExtension"/>
+    <!-- <module name="DesignForExtension"/> -->
     <module name="FinalClass"/>
     <module name="InterfaceIsType"/>
     <module name="VisibilityModifier"/>
     <module name="ArrayTypeStyle"/>
-    <module name="FinalParameters"/>
+    <!--<module name="FinalParameters"/>-->
     <module name="TodoComment"/>
     <module name="UpperEll"/>
   </module>
