@@ -5,7 +5,7 @@
     This configuration file was written by the eclipse-cs plugin configuration editor
 -->
 <!--
-    Checkstyle-Configuration: mt_checks
+    Checkstyle-Configuration: Monmouth Checks
     Description: none
 -->
 <module name="Checker">
@@ -13,11 +13,13 @@
   <property name="fileExtensions" value="java, properties, xml"/>
   <module name="TreeWalker">
     <module name="JavadocMethod">
-        <property name="allowMissingPropertyJavadoc" value="true"/>
+      <property name="allowMissingPropertyJavadoc" value="true"/>
     </module>
     <module name="JavadocType"/>
     <module name="JavadocVariable"/>
-    <module name="JavadocStyle"/>
+    <module name="JavadocStyle">
+        <property name="checkHtml" value="false"/>
+    </module>
     <module name="ConstantName"/>
     <module name="LocalFinalVariableName"/>
     <module name="LocalVariableName"/>
@@ -27,7 +29,9 @@
     <module name="ParameterName"/>
     <module name="StaticVariableName"/>
     <module name="TypeName"/>
-    <module name="AvoidStarImport"/>
+    <module name="AvoidStarImport">
+      <property name="allowStaticMemberImports" value="true"/>
+    </module>
     <module name="IllegalImport"/>
     <module name="RedundantImport"/>
     <module name="UnusedImports">
@@ -35,6 +39,7 @@
     </module>
     <module name="LineLength">
       <property name="max" value="100"/>
+      <property name="ignorePattern" value="^import.*"/>
     </module>
     <module name="MethodLength"/>
     <module name="ParameterNumber"/>
@@ -55,26 +60,27 @@
     <module name="LeftCurly"/>
     <module name="NeedBraces"/>
     <module name="RightCurly"/>
-    <module name="AvoidInlineConditionals"/>
+    <module name="AvoidInlineConditionals">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
     <module name="EmptyStatement"/>
     <module name="EqualsHashCode"/>
     <module name="HiddenField">
-        <property name="tokens" value="VARIABLE_DEF"/>
+      <property name="tokens" value="VARIABLE_DEF"/>
     </module>
     <module name="IllegalInstantiation"/>
     <module name="InnerAssignment"/>
     <module name="MagicNumber">
-        <property name="ignoreNumbers" value="-1, 0, 1, 2, 3"/>
+      <property name="ignoreNumbers" value="-1, 0, 1, 2, 3"/>
     </module>
     <module name="MissingSwitchDefault"/>
     <module name="SimplifyBooleanExpression"/>
     <module name="SimplifyBooleanReturn"/>
-    <!-- <module name="DesignForExtension"/> -->
     <module name="FinalClass"/>
     <module name="InterfaceIsType"/>
     <module name="VisibilityModifier"/>
     <module name="ArrayTypeStyle"/>
-    <!--<module name="FinalParameters"/>-->
     <module name="TodoComment"/>
     <module name="UpperEll"/>
   </module>
