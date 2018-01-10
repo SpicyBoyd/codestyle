@@ -33,7 +33,7 @@
 在Eclipse IDE裡，在『window->preference->java->code style->formatter』進行Import
 
 formatter.xml是根據Sun（如今的Oracle）的coding convention修改而成的，若要使用Google的
-coding convention，請使用google-formatter.xml。
+coding convention，請使用google-formatter.xml（根據[Google Style Cuide](https://github.com/google/styleguide/blob/gh-pages/eclipse-java-google-style.xml)修改而成）。
 
 ## Checkstyle Configuration
 在IDE裡先把Checkstyle plug-in裝起來（Help->Eclipse Marketplace，搜尋checkstyle——eclipse-cs）
