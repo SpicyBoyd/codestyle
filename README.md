@@ -28,9 +28,12 @@
 建立新的Class或Interface時,請把『generate comments』check起來
 
 ## Formatter
-在IDE裡，可以highlight一段Code，用『Ctrl+Shift+F』熱鍵，由IDE幫你做Formatting。
-取得formatter.xml檔案後
+在IDE裡，可以highlight一段Code，用『Ctrl+Shift+F』熱鍵（在Mac上是「Command+Shift+F」），
+由IDE幫你做Formatting。取得formatter.xml檔案後
 在Eclipse IDE裡，在『window->preference->java->code style->formatter』進行Import
+
+formatter.xml是根據Sun（如今的Oracle）的coding convention修改而成的，若要使用Google的
+coding convention，請使用google-formatter.xml。
 
 ## Checkstyle Configuration
 在IDE裡先把Checkstyle plug-in裝起來（Help->Eclipse Marketplace，搜尋checkstyle——eclipse-cs）
